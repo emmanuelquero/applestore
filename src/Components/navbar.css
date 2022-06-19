@@ -51,3 +51,8 @@ footer {
 .imagen {
     size: 30px;
 }
+.formulario {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}

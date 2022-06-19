@@ -36,16 +36,22 @@ const Navbar = () =>{
             <h2 className="text-center">PRODUCTOS ACTUALIZADOS</h2>            
         </div>
         <hr></hr>
+        <div>
+            <p>Registrese para recibir ofertas:</p>
+            <div>
+            <ItemListContainer className="container"/>
+            <input className="formulario"  placeholder ='Ingrese Nombre'/>
+            <input className="formulario" placeholder ='Ingrese Apellido'/> 
+            <input className="formulario" placeholder ='Ingrese Email'/>  
+            <button style={{margin: '10px'}}>Registrarse</button>       
+            </div>       
+        </div>
         <div className="container">
         <footer className="text-center">
             <p>Autor: Emanuel Quero</p>
         </footer>  
         </div>  
-        <div>
-            <ItemListContainer name='coderhouse' app='tuvieja' />
-            <ItemListContainer name='binance' app='tupapa' />
-        </div>
-           
+       
        </body> 
     )
 }
