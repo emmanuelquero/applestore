@@ -1,32 +1,46 @@
 import React from "react";
 import logo from "../assets/logotienda.jpg"
-import logo2 from '../assets/carrito.png';
 import "./navbar.css"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from './cartwidget';
 
 
 
 const Navbar = () =>{
     return (
-        <body>
+        <body className="container">
         <header>
-        <img src={logo} alt="" />
-        <h1>Apple Store</h1>
-        <nav>
-            <a href="">PRODUCTOS USADOS</a>
-            <a href="">PREGUNTAS FRECUENTES</a>
-            <a href="">CONTACTO</a>
-        </nav>
-        <img src={logo2} alt="" />
-        </header>
-        <div>
-            <hr></hr>
-            <h2>PRODUCTOS ACTUALIZADOS</h2>            
+        <div className="container">
+            <div className="row">                
+                <div className="col-md-2">
+                    <img className="imagen" src={logo} alt="" /> 
+                </div>
+                <div className="col-md-4">
+                    <h1 className="text-center">Apple Store</h1> 
+                </div>
+                <div className="col-md-4">
+                    <nav>
+                        <a className="navegacion" href="">PRODUCTOS USADOS</a>
+                        <a className="navegacion" href="">PREGUNTAS FRECUENTES</a>
+                        <a className="navegacion" href="">CONTACTO</a>
+                    </nav>
+                </div>
+                <div className="col-md-2">
+                    <CartWidget />
+                    </div>                    
+                </div>            
+        </div>
+        </header>   
+        <div className="container">            
+            <h2 className="text-center">PRODUCTOS ACTUALIZADOS</h2>            
         </div>
         <hr></hr>
-        <footer>
+        <div className="container">
+        <footer className="text-center">
             <p>Autor: Emanuel Quero</p>
-        </footer>
+        </footer>  
+        </div>
+        
 
        </body> 
     )
