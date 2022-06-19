@@ -3,6 +3,7 @@ import logo from "../assets/logotienda.jpg"
 import "./navbar.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './cartwidget';
+import ItemListContainer from "./ItemListContainer";
 
 
 
@@ -39,9 +40,12 @@ const Navbar = () =>{
         <footer className="text-center">
             <p>Autor: Emanuel Quero</p>
         </footer>  
+        </div>  
+        <div>
+            <ItemListContainer name='coderhouse' app='tuvieja' />
+            <ItemListContainer name='binance' app='tupapa' />
         </div>
-        
-
+           
        </body> 
     )
 }
