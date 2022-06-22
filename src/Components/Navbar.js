@@ -3,8 +3,8 @@ import logo from "../assets/logotienda.jpg"
 import "./navbar.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './cartwidget';
-import ItemListContainer from "./ItemListContainer";
 import imagen1 from "../assets/Iphone13.png";
+
 
 
 
@@ -39,25 +39,10 @@ const Navbar = () =>{
             <img src={imagen1} alt="iphone13"/>
             <p>Iphone 13. 500.000$</p>     
             </div>
-                     
+                   
         </div>
-        <hr></hr>
-        <div>
-            <p>Registrese para recibir ofertas:</p>
-            <div>
-            <ItemListContainer className="container"/>
-            <input className="formulario"  placeholder ='Ingrese Nombre'/>
-            <input className="formulario" placeholder ='Ingrese Apellido'/> 
-            <input className="formulario" placeholder ='Ingrese Email'/>  
-            <button style={{margin: '10px'}}>Registrarse</button>       
-            </div>       
-        </div>
-        <div className="container">
-        <footer className="text-center">
-            <p>Autor: Emanuel Quero</p>
-        </footer>  
-        </div>  
-       
+        <hr></hr>        
+        
        </body> 
     )
 }
