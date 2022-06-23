@@ -37,11 +37,12 @@ const Navbar = () =>{
             <h2 className="text-center">PRODUCTOS ACTUALIZADOS</h2>  
             <div>
             <img src={imagen1} alt="iphone13"/>
-            <p>Iphone 13. 500.000$</p>     
+            <p>Iphone 13. (500.000$)</p>
+            <p>Stock: 12</p>     
             </div>
                    
         </div>
-        <hr></hr>        
+              
         
        </body> 
     )

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css"
-
+import "./ItemCount"
 
 
 const ItemListContainer = ({placeholder}) => { 
@@ -12,10 +12,13 @@ const ItemListContainer = ({placeholder}) => {
     <input className="formulario" placeholder ='Ingrese Apellido'/> 
     <input className="formulario" placeholder ='Ingrese Email'/>  
     <button style={{margin: '10px'}}>Registrarse</button>   
-    </div>
+    </div> 
     )
-
 };
+
+
     
+
+
 
 export default ItemListContainer

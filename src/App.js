@@ -10,8 +10,10 @@ const App = () => {
   return (
     <div>
         <Navbar/>
-        <ItemListContainer />
         <ItemCount />
+        <hr></hr>
+        <ItemListContainer />
+      
         
          
     </div>
