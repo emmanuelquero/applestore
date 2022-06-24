@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Navbar from "./Components/Navbar";
 import ItemListContainer from './Components/ItemListContainer';
 import ItemCount from "./Components/ItemCount";
@@ -10,18 +10,11 @@ const App = () => {
   return (
     <div>
         <Navbar/>
-        <ItemCount />
+        <ItemCount maxStock={5} minStock={1}/>
         <hr></hr>
-        <ItemListContainer />
-      
-        
-         
-    </div>
-   
-    
-
-  )
-  
-}
+        <ItemListContainer />       
+    </div>     
+  );  
+};
 
 export default App;
