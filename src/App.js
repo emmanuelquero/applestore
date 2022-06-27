@@ -7,12 +7,13 @@ import "./Components/navbar.css";
 
 
 const App = () => {
+  const greeting= "bienvenidos"
   return (
     <div>
         <Navbar/>
         <ItemCount maxStock={5} minStock={1}/>
         <hr></hr>
-        <ItemListContainer />       
+        <ItemListContainer greeting={greeting} />       
     </div>     
   );  
 };

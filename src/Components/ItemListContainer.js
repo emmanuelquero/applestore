@@ -1,24 +1,26 @@
-import React from "react";
-import "./navbar.css"
-import "./ItemCount"
+import React, { useEffect, useState} from 'react'
+import ItemList from './ItemList'
+import { getData } from '../mocks/fakeApi'
 
-
-const ItemListContainer = ({placeholder}) => { 
+const ItemListContainer = ({greeting}) => { 
+    const [productList, setProductList]= useState([])
+    const [loading, setLoading]=useState (true)
+    
+        useEffect (()=>{
+            getData
+            .then((result)=> setProductList (result))
+            .catch((error)=> console.log(error))
+            .finally (()=>setLoading(false) )
+            
+        }, [])    
     return (
         <div className="container">
-    <p>Registrese para recibir ofertas:</p>    
-    <div type='text' placeholder={placeholder}/>            
-    <input className="formulario"  placeholder ='Ingrese Nombre'/>
-    <input className="formulario" placeholder ='Ingrese Apellido'/> 
-    <input className="formulario" placeholder ='Ingrese Email'/>  
-    <button style={{margin: '10px'}}>Registrarse</button>   
-    </div> 
+            <h1>{greeting}</h1> 
+            {loading ? <p>Cargando...</p> : <ItemList productList={productList} />}
+            
+            
+        </div> 
     )
-};
-
-
-    
-
-
+}  
 
 export default ItemListContainer
