@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import "./ItemListContainer";
 
 const ItemCount = ({ maxStock, minStock}) => {
+    //console.log('Soy el contador')
     const [contador, setContador] = useState (1);
 
     const handlerClick = () => {
@@ -23,6 +24,7 @@ const reset = () => {
 const agregar = () => {
     console.log (contador);
 };
+
     return (
         <div className='container'>
         <h1>{contador}</h1>

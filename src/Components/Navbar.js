@@ -34,7 +34,7 @@ const Navbar = () =>{
         </div>
         </header>   
         <div className="container">            
-            <h2 className="text-center">PRODUCTOS ACTUALIZADOS</h2>  
+            <h2 className="text-center">ULTIMOS PRODUCTOS ACTUALIZADOS</h2>  
             <div>
             <img src={imagen1} alt="iphone13"/>
             <p>Iphone 13. (500.000$)</p>
