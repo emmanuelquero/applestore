@@ -5,6 +5,7 @@ import ItemCount from "./Components/ItemCount";
 import "./Components/navbar.css";
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import ItemDetailContainer from "./Components/ItemDetailContainer";
 
 
 
@@ -18,9 +19,8 @@ function App() {
         <hr></hr>
         <ItemListContainer greeting={greeting} /> 
         <hr></hr>
-            
-           
-    </div>     
+        <ItemDetailContainer />
+         </div>     
   );  
 };
 

@@ -16,3 +16,5 @@ const Item = ({celular}) => {
     )
 }
 export default Item
+
+
