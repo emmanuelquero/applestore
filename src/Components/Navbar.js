@@ -4,32 +4,39 @@ import "./navbar.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './cartwidget';
 import imagen1 from "../assets/Iphone13.png";
+import { Link , NavLink} from "react-router-dom"
 
 
 
 
 const Navbar = () =>{
+
+    const categories = [
+        {name: "Usados", id: 0, route:"/category/Usados"},
+        {name: "PreguntasFrecuentes", id: 1, route:"/category/PreguntasFrecuentes"},
+        {name: "Contacto", id: 1, route:"/category/Contacto"},
+    ];
+
     return (
         <body className="container">
         <header>
         <div className="container">
             <div className="row">                
                 <div className="col-md-2">
-                    <img className="imagen" src={logo} alt="" /> 
+                   <Link to="/"> <img className="imagen" src={logo} alt="" /></Link>
                 </div>
                 <div className="col-md-4">
                     <h1 className="text-center">Apple Store</h1> 
                 </div>
                 <div className="col-md-4">
                     <nav>
-                        <a className="navegacion" href="">PRODUCTOS USADOS</a>
-                        <a className="navegacion" href="">PREGUNTAS FRECUENTES</a>
-                        <a className="navegacion" href="">CONTACTO</a>
+                        {categories.map((category)=> <NavLink key={category.id}  to={category.route}>{category.name}</NavLink>)}
+                        
                     </nav>
                 </div>
                 <div className="col-md-2">
-                    <CartWidget />
-                    </div>                    
+                  <Link to="/cart"><CartWidget /></Link>
+                </div>                    
                 </div>            
         </div>
         </header>   
