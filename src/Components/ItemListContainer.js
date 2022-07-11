@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import { getData } from '../mocks/fakApi'
+import {  getProducts } from '../mocks/fakApi'
 import { useParams } from 'react-router-dom'
 
 
@@ -14,7 +14,8 @@ const ItemListContainer = ({greeting}) => {
        
     useEffect (()=>{
         console.log(categoryId)
-        getData
+        setLoading (true)
+        getProducts(categoryId)
         .then((result)=>setProductList(result))
         .catch((error)=> console.log(error))
         .finally(()=>setLoading (false))

@@ -1,17 +1,21 @@
 import React, { useState, useEffect} from 'react';
-import { getInfo } from '../mocks/fakApi';
+import {  getOneProduct } from '../mocks/fakApi';
 import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState ({});
     const [loading, setLoading] = useState(true)
 
+    const {id} = useParams ();
 
 useEffect(()=>{
-    getInfo ()
+    setLoading(true);
+    getOneProduct (id)    
     .then((res) => {
         setProduct(res);
+    
     })
     .catch((error) => {
         console.log(error);
@@ -19,7 +23,7 @@ useEffect(()=>{
     .finally (()=> {
         setLoading (false);
         });
-}, []);
+}, {id});
 
 return (
     <div>
