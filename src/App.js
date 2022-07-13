@@ -8,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import { BrowserRouter, Route , Routes} from "react-router-dom";
 import Cart from './Components/Cart/Cart.js'
+//import ItemCount from "./Components/ItemCount";
 
 
 
@@ -15,9 +16,9 @@ import Cart from './Components/Cart/Cart.js'
 
 function App() {
   const greeting= "Bienvenidos a Apple Store"
-  return (
-    <BrowserRouter>      
-        <Navbar/>        
+  return (    
+    <BrowserRouter className="container">      
+        <Navbar/> 
         <Routes>
           <Route path="/" element ={<ItemListContainer greeting={greeting}/>} /> 
           <Route
@@ -29,8 +30,9 @@ function App() {
         
         <hr></hr>
         
-    </BrowserRouter>  
-  );  
+    </BrowserRouter>
+      
+      );  
 };
 
 export default App;

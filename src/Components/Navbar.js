@@ -3,13 +3,12 @@ import logo from "../assets/logotienda.jpg"
 import "./navbar.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './cartwidget';
-import imagen1 from "../assets/Iphone13.png";
+//import imagen1 from "../assets/Iphone13.png";
 import { Link } from 'react-router-dom';
 
 const categories = [
     {estado: 'Home', id: 0, route:'/'},
     {estado: 'Usados', id: 1, route:'/category/Usados'},
-    {estado: 'PreguntasFrecuentes', id: 2, route:'/category/PreguntasFrecuentes'},
     {estado: 'Nuevos', id: 3, route:'/category/Nuevos'},
 ];
 
@@ -42,16 +41,7 @@ const Navbar = () =>{
                 </div>                    
                 </div>            
         </div>
-        </header>   
-    
-   <div className="container">            
-            <h2 className="text-center">ULTIMOS PRODUCTOS ACTUALIZADOS</h2>  
-            <div>
-            <img src={imagen1} alt="iphone13"/>
-            <p>Iphone 13. (500.000$)</p>
-            <p>Stock: 12</p>     
-            </div>                  
-        </div>           
+        </header>  
         </body> 
     )
 }
